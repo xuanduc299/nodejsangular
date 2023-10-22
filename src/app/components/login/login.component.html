@@ -1,0 +1,38 @@
+<!-- <form [formGroup]="loginForm" (ngSubmit)="login()" novalidate>
+  <mat-form-field class="d-flex justify-content-center">
+    <mat-label>Email</mat-label>
+    <input matInput placeholder="Ex. Jon" formControlName="email" />
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Password</mat-label>
+    <input matInput type="password" placeholder="Ex. Jon" formControlName="password" />
+  </mat-form-field>
+  <button color="accent" [disabled]="!loginForm.valid" mat-raised-button type="submit">
+    <span>Log in</span>
+  </button>
+</form> -->
+
+<div class="container">
+  <div class="borderLine"></div>
+  <div class="borderLine"></div>
+  <div class="borderLine"></div>
+  <div class="borderLine"></div>
+  <form [formGroup]="loginForm" (ngSubmit)="login()">
+    <h2>Sign in</h2>
+    <div class="inputBox">
+      <input type="text" required formControlName="email">
+      <span>Email</span>
+      <i></i>
+    </div>
+    <div class="inputBox">
+      <input type="password" required formControlName="password">
+      <span>Password</span>
+      <i></i>
+    </div>
+    <div class="links">
+      <a href="#">Forgot Password</a>
+      <a routerLink="/signup">Sign up</a>
+    </div>
+    <input type="submit" value="Login" [disabled]="!loginForm.valid">
+  </form>
+</div>
